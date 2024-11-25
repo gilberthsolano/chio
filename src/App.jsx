@@ -13,7 +13,8 @@ function App() {
       <div className="container mx-auto flex flex-col min-h-screen">
         <Navigation />
         <Routes>
-          <Route path="/" element={<HomePage />} />  {/* Página de Inicio */}
+        <Route path="/" element={<Navigate to="/chio" />} /> {/* Redirección a Inicio */}
+          <Route path="/chio" element={<HomePage />} />  {/* Página de Inicio */}
           <Route path="/info" element={<InfoPage />} />  {/* Página de Información */}
           <Route path="/servicios" element={<Servicios />} />  {/* Página de Servicios */}
           <Route path="/galeria" element={<Galeria />} /> {/* Página de Galería */}
