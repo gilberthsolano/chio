@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage'; // Importación correcta sin llaves
-import InfoPage from './pages/InfoPage';  // Importación correcta sin llaves
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from './pages/HomePage'; 
+import InfoPage from './pages/InfoPage';
 import Servicios from './pages/Servicios';
 import { Navigation } from './components/Navigation';
 import { Toaster } from 'react-hot-toast';
 import Galeria from './pages/Galeria';
-import Footer from './components/Footer'; // Asegúrate de tener la ruta correcta
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,15 +13,15 @@ function App() {
       <div className="container mx-auto flex flex-col min-h-screen">
         <Navigation />
         <Routes>
-        <Route path="/" element={<Navigate to="/chio" />} /> {/* Redirección a Inicio */}
-          <Route path="/chio" element={<HomePage />} />  {/* Página de Inicio */}
-          <Route path="/info" element={<InfoPage />} />  {/* Página de Información */}
-          <Route path="/servicios" element={<Servicios />} />  {/* Página de Servicios */}
-          <Route path="/galeria" element={<Galeria />} /> {/* Página de Galería */}
-       
+          {/* Redirección de '/' a '/chio' */}
+          <Route path="/" element={<Navigate to="/chio" />} />
+          <Route path="/chio" element={<HomePage />} />
+          <Route path="/info" element={<InfoPage />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/galeria" element={<Galeria />} />
         </Routes>
         <Toaster />
-        <Footer /> {/* Footer agregado aquí */}
+        <Footer />
       </div>
     </BrowserRouter>
   );

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Inicio', href: '/' },
+  { name: 'Inicio', href: '/chio' },
   { name: 'Quienes somos', href: '/info' },
   { name: 'Servicios', href: '/servicios' },
   { name: 'Galería', href: '/galeria' },
