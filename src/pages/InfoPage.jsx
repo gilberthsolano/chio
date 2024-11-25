@@ -9,7 +9,7 @@ const InfoPage = () => {
           {/* Text Section */}
           <div>
             <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl">
-              Quiénes somooos
+              Quiénes somooooos
             </h1>
             <p className="mt-2 text-xl text-gray-700 leading-8 text-justify">
               En Centro de Habilidades Integrales Otero trabajamos con el compromiso de ofrecer una educación de calidad que fomente el desarrollo de habilidades cognitivas, emocionales y sociales en los niños. Nuestro equipo está compuesto por psicopedagogos, terapeutas del habla y educadores especializados, quienes implementan estrategias de enseñanza adaptadas a las necesidades individuales de cada niño.
