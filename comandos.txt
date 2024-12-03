@@ -1,0 +1,181 @@
+Microsoft Windows [Versión 10.0.22621.4169]
+(c) Microsoft Corporation. Todos los derechos reservados.   
+
+
+C:\Users\DASH\OneDrive\Documentos\curso-proyecto\venv>cd Scripts       
+
+C:\Users\DASH\OneDrive\Documentos\curso-proyecto\venv\Scripts>activate.bat
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto\venv\Scripts>cd ..
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto\venv>cd ..
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>pip install dja
+ngo 
+Collecting django
+  Downloading Django-5.1.1-py3-none-any.whl (8.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 1.5 MB/s eta 0:00:00
+Collecting sqlparse>=0.3.1
+  Using cached sqlparse-0.5.1-py3-none-any.whl (44 kB)
+Collecting tzdata
+  Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 1.4 MB/s eta 0:00:00
+Collecting asgiref<4,>=3.8.1
+  Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Collecting typing-extensions>=4
+  Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)       
+Installing collected packages: tzdata, typing-extensions, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.1.1 sqlparse-0.5.1 typing-extensions-4.12.2 tzdata-2024.2
+
+[notice] A new release of pip is available: 23.0.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip       
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>django-admin st
+artproject django_crud_api .
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.  
+
+Available subcommands:
+
+[auth]
+    changepassword
+    createsuperuser
+
+[contenttypes]
+    remove_stale_contenttypes
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    optimizemigration
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 29, 2024 - 14:07:32
+Django version 5.1.1, using settings 'django_crud_api.settings'        
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[29/Sep/2024 14:07:46] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[29/Sep/2024 14:07:46] "GET /favicon.ico HTTP/1.1" 404 2217
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py startapp tasks
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py migrate        
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 29, 2024 - 14:09:47
+Django version 5.1.1, using settings 'django_crud_api.settings'        
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[29/Sep/2024 14:09:50] "GET / HTTP/1.1" 200 12068
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>pip install dja
+ngorestframework
+Collecting djangorestframework
+  Using cached djangorestframework-3.15.2-py3-none-any.whl (1.1 MB)    
+Requirement already satisfied: django>=4.2 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from djangorestframework) (5.1.1)
+Requirement already satisfied: tzdata in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django>=4.2->djangorestframework) (2024.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django>=4.2->djangorestframework) (0.5.1)
+Requirement already satisfied: asgiref<4,>=3.8.1 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django>=4.2->djangorestframework) (3.8.1)
+Requirement already satisfied: typing-extensions>=4 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from asgiref<4,>=3.8.1->django>=4.2->djangorestframework) (4.12.2)
+Installing collected packages: djangorestframework
+Successfully installed djangorestframework-3.15.2
+
+[notice] A new release of pip is available: 23.0.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip       
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>pip install django-cors-headers
+Collecting django-cors-headers
+  Using cached django_cors_headers-4.4.0-py3-none-any.whl (12 kB)      
+Requirement already satisfied: django>=3.2 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django-cors-headers) (5.1.1)
+Requirement already satisfied: asgiref>=3.6 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django-cors-headers) (3.8.1)
+Requirement already satisfied: typing-extensions>=4 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from asgiref>=3.6->django-cors-headers) (4.12.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django>=3.2->django-cors-headers) (0.5.1)
+Requirement already satisfied: tzdata in c:\users\dash\onedrive\documentos\curso-proyecto\venv\lib\site-packages (from django>=3.2->django-cors-headers) (2024.2)
+Installing collected packages: django-cors-headers
+Successfully installed django-cors-headers-4.4.0
+
+[notice] A new release of pip is available: 23.0.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip       
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>python manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 29, 2024 - 14:52:35
+Django version 5.1.1, using settings 'django_crud_api.settings'        
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[29/Sep/2024 14:52:38] "GET / HTTP/1.1" 200 12068
+
+(venv) C:\Users\DASH\OneDrive\Documentos\curso-proyecto>cd venv       
+
+C:\Users\DASH\OneDrive\Documentos\curso-proyecto\Client>npm run dev
+      
