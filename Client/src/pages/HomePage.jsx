@@ -16,7 +16,7 @@ const HomePage = () => {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                CENTRO DE HABILIDADES INTEGRALES OTERO
+                CENTRO DE HABILIDADES INTEGRALES OTEROOO
               </h1>
               <div className="mt-4 space-y-8 text-xl leading-8 text-gray-700 text-justify">
                 <p>
